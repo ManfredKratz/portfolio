@@ -30,7 +30,7 @@ const Technologies = () => {
   return (
     <>
       <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center' }} color="primary" mt={25} mb={5}>
-        Technologies I recently used:
+        Technologies I've recently used:
       </Typography>
       <div style={{
         display: 'flex',

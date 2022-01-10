@@ -10,7 +10,7 @@ const Home = () => {
   const alignCenter = { display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', color: '#FFFFFF' };
 
   return (
-    <Parallax pages={4} style={{ background: '#020C1B' }}>
+    <Parallax pages={5} style={{ background: '#020C1B' }}>
       <ParallaxLayer offset={0} speed={0} style={{ background: '#H7H7H7' }} />
       <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter }}>
         <div style={{ padding: 15 }}>
@@ -25,13 +25,13 @@ const Home = () => {
         </div>
       </ParallaxLayer>
       <ParallaxLayer offset={2} speed={0} />
-      <ParallaxLayer offset={2.5} speed={0.5} style={{ ...alignCenter }}>
+      <ParallaxLayer offset={2} speed={0.5} style={{ ...alignCenter }}>
         <div style={{ padding: 15 }}>
           <Projects/>
         </div>
       </ParallaxLayer>
       <ParallaxLayer offset={3} speed={0} />
-      <ParallaxLayer height='100%' offset={3} speed={0.5} style={{ ...alignCenter, background: '#6ddee0' }}>
+      <ParallaxLayer offset={3.5} speed={0.5} style={{ ...alignCenter, background: '#6ddee0' }}>
         <div style={{ padding: 15 }}>
           <Contact />
         </div>

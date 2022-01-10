@@ -1,86 +1,26 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import { useState } from 'react';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Pagination from '@mui/material/Pagination';
 
-import aboutme from '../assets/aboutme.jpg';
+import Cards from '../utils/Cards';
+import ProjectData from '../data/projects';
 
 const Projects = () => {
+  const [page, setPage] = useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
   return (
     <>
-    <Typography variant="h4" mb={2}><b>Projects I've built</b></Typography>
-    <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-    <Card sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image={aboutme}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
-          <b>Tweety</b>
-        </Typography>
-        <Typography gutterBottom variant="overline" component="div">
-          Social media platform
-        </Typography>
-        <Typography variant="body2" mt={3} color="#FFFFFF">
-          Socket based social media platform with realtime posts.
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-        <Card sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
-        <CardMedia
-          component="img"
-          alt="green iguana"
-          height="140"
-          image={aboutme}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            <b>Lion Investment</b>
-          </Typography>
-          <Typography gutterBottom variant="overline" component="div">
-          Investment banking app
-        </Typography>
-          <Typography variant="body2" mt={3} color="#FFFFFF">
-            Socket based social media platform with realtime posts.
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
-      <Card sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
-        <CardMedia
-          component="img"
-          alt="green iguana"
-          height="140"
-          image={aboutme}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
-            <b>Fliesen Buddy's</b>
-          </Typography>
-          <Typography gutterBottom variant="overline" component="div">
-          Tilelayer homepage
-        </Typography>
-          <Typography variant="body2" mt={3} color="#FFFFFF">
-            Socket based social media platform with realtime posts.
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
-      </div>
-      </>
+      <Typography variant="h4" mb={2}><b>Projects I've built</b></Typography>
+      <Grid container justifyContent="space-evenly" spacing={{ xs: 2, md: 3 }} columns={{ xs: 1, sm: 2, md: 4 }}>
+        <Cards data={ProjectData} />
+      </Grid>
+      <Pagination count={10} page={page} onChange={handleChange} />
+    </>
   );
 }
 
