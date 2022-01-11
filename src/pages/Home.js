@@ -18,20 +18,26 @@ const Home = () => {
           {/**<Logo3D/>**/}
         </div>
       </ParallaxLayer>
-      <ParallaxLayer offset={1} speed={0} />
-      <ParallaxLayer offset={1} speed={0.5} style={{ ...alignCenter }}>
+      <ParallaxLayer offset={1} speed={1} style={{ height: 750, background: '#0A192F'}}/>
+      <ParallaxLayer offset={1} speed={0.8} style={{ ...alignCenter }}>
         <div style={{ padding: 15 }}>
           <About />
         </div>
       </ParallaxLayer>
-      <ParallaxLayer offset={2} speed={0} />
-      <ParallaxLayer offset={2} speed={0.5} style={{ ...alignCenter }}>
+      <ParallaxLayer offset={1.8} speed={0} />
+      <ParallaxLayer offset={1.8} speed={0.5} factor={1.2} style={{ ...alignCenter }}>
+        <div style={{ padding: 15 }}>
+          <Technologies />
+        </div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={2.6} speed={0} />
+      <ParallaxLayer offset={2.6} speed={0.5} factor={1.5} style={{ ...alignCenter }}>
         <div style={{ padding: 15 }}>
           <Projects/>
         </div>
       </ParallaxLayer>
-      <ParallaxLayer offset={3} speed={0} />
-      <ParallaxLayer offset={3.5} speed={0.5} style={{ ...alignCenter, background: '#6ddee0' }}>
+      <ParallaxLayer offset={4} speed={0} />
+      <ParallaxLayer offset={4} speed={0.5} style={{ ...alignCenter, background: '#6ddee0' }}>
         <div style={{ padding: 15 }}>
           <Contact />
         </div>

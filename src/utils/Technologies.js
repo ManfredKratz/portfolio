@@ -32,10 +32,7 @@ const Technologies = () => {
       <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center' }} color="primary" mt={25} mb={5}>
         Technologies I've recently used:
       </Typography>
-      <div style={{
-        display: 'flex',
-        flexWrap: 'wrap'
-      }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {items.map((item, i) => (
           <div key={i} style={{ ...alignContent }}>
             <img alt={item.description} src={item.icon} height="50" width="50" />

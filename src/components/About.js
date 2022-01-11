@@ -18,7 +18,7 @@ const About = () => {
       During my study I started to specialize in frontend development and created various web apps.<br /><br />
       As a junior engineer I 'm recently working on larger and more complex applications.<br />
       <Button variant="outlined" startIcon={<AssignmentIcon />} color="primary" sx={{mt: 5}}>Get my resume</Button>
-      <Technologies/>
+      
     </>
   );
 }
