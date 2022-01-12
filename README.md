@@ -1,7 +1,11 @@
 # Manfred Kratz Portfolio
 
 Welcome to my portfolio page.
-It uses React, MUI, React-spring.
+
+Following technologies are used for creating the application:
+- React 
+- MUI 
+- Typed.js
 
 Feel free to contact me.
 

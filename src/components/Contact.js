@@ -9,9 +9,9 @@ const Contact = () => {
 
   return (
     <Box sx={{ maxWidth: '500px' }}>
-      <Typography variant="h3" color="secondary"><b>Get in touch</b></Typography>
-      <Typography variant="body1" mt={2} mb={5} color="secondary"> Contact me if you have any questions. I am always looking for new challenges and opportunities.</Typography>
-        <Button startIcon={<MailOutlineIcon/>} variant="contained" size="large" color="secondary" disableElevation={true}>Contact me</Button>
+      <Typography variant="h3" color="text.title"><b>Get in touch</b></Typography>
+      <Typography variant="body1" mt={2} mb={5} color="primary"> Contact me if you have any questions. I am always looking for new challenges and opportunities.</Typography>
+        <Button startIcon={<MailOutlineIcon/>} variant="contained" size="large" color="primary" disableElevation={true}>Contact me</Button>
     </Box>
   );
 }

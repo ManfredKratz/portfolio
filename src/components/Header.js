@@ -31,20 +31,20 @@ const Header = () => {
   );
 
   const name = (
-    <Typography variant='h3' mt={2}>
+    <Typography variant='h3' color="text.title" mt={2}>
       <b><span ref={typedName}></span></b>
     </Typography>
   );
 
   const title = (
-    <Typography variant='h6' mt={2} mb={5}  color="primary">
+    <Typography variant='h6' mt={2} mb={5} color="primary">
       I'm a frontend engineer living near Ulm.
     </Typography>
   );
 
   const description = (
     <Box max-width='750px'>
-      <Typography mt={2} variant='body1' color="gray" >
+      <Typography mt={2} variant='body1'  >
         I'm specializing in building user-friendly digital experiences.<br />
         Besides my passion for web development, I am convinced of the human-centered
         development approach.
@@ -59,7 +59,7 @@ const Header = () => {
       {items.map((item, i) => (
         <div mt={2} key={i}>{item}</div>
       ))}
-      <Button variant="contained" color="primary" disableElevation={true} sx={{ mt: 6 }}>
+      <Button variant="contained" color="primary" size="large" disableElevation={true} sx={{ mt: 6 }}>
         Contact me
       </Button>
     </>

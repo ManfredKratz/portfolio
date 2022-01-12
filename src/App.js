@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
+import Navigation from "./utils/Navigation/Navigation";
 import { ThemeProvider, createTheme } from '@mui/material/styles'; 
 
 const theme = createTheme({
@@ -9,10 +9,14 @@ const theme = createTheme({
         mainGradient: 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)',
      },
      secondary: {
-       main: '#020C1B',
+       main: '#051124',
      },
-     gray: {
-      main: '#B3B3B3',
+     background: {
+      main: '#051124',
+    },
+    text: {
+      title: '#dce3fc',
+      main: '#c5cff0',
     },
      white: {
       main: '#FFFFFF',
@@ -26,7 +30,7 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme = { theme }>
-        <Navbar/>
+        <Navigation/>
         <Home />
         </ThemeProvider>
   );

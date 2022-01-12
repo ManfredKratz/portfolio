@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Slide from '@mui/material/Slide';
+import Box from '@mui/material/Box';
 
 import CardsDialog from './CardsDialog';
 
@@ -28,7 +28,7 @@ const Cards = ({data}) => {
   return (
     <>
         {data.map((project, i) => (
-          <Card id={project.id} key={i} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
+          <Card id={project.id} key={i} sx={{ mt: 4, ml:2, mr: 2, mb: 4, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
             <CardMedia
               component="img"
               alt={project.imageDescription}
@@ -36,18 +36,18 @@ const Cards = ({data}) => {
               image={project.image}
             />
             <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
+              <Typography gutterBottom variant="h6" color="text.title" component="div">
                 <b>{project.name}</b>
               </Typography>
-              <Typography gutterBottom variant="overline" component="div">
+              <Typography gutterBottom variant="overline" color="text.main" component="div">
                 {project.title}
               </Typography>
-              <Typography variant="body2" mt={3} color="#FFFFFF">
+              <Typography variant="body2" mt={3} color="text.main" >
                 {project.description}
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" onClick={() => handleOpen(project.id)}>Read more</Button>
+            <CardActions >
+              <Button variant="outlined" onClick={() => handleOpen(project.id)}>Read more</Button>
             </CardActions>
           </Card>
         ))}

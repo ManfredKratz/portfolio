@@ -29,7 +29,7 @@ const Technologies = () => {
 
   return (
     <>
-      <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center' }} color="primary" mt={25} mb={5}>
+      <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center' }} color="primary.main" mt={25} mb={5}>
         Technologies I've recently used:
       </Typography>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
