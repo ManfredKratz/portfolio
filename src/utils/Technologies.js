@@ -9,6 +9,8 @@ import react from '../assets/react.png';
 import vue from '../assets/vue.png';
 import gitlab from '../assets/gitlab.png';
 
+import Fade from 'react-reveal-effects/Fade';
+
 const items = [
   { name: 'HTML 5', description: 'HTML 5 Logo', icon: html5 },
   { name: 'CSS', description: 'CSS 3 Logo', icon: css },
@@ -34,10 +36,12 @@ const Technologies = () => {
       </Typography>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {items.map((item, i) => (
-          <div key={i} style={{ ...alignContent }}>
-            <img alt={item.description} src={item.icon} height="50" width="50" />
-            <Typography variant="overline" mb={5}>{item.name}</Typography>
-          </div>
+          <Fade bottom delay={i * 50}>
+            <div key={i} style={{ ...alignContent }}>
+              <img alt={item.description} src={item.icon} height="50" width="50" />
+              <Typography variant="overline" mb={5}>{item.name}</Typography>
+            </div>
+          </Fade>
         ))}
       </div>
       <div />

@@ -10,8 +10,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 import CardsDialog from './CardsDialog';
+import Fade from 'react-reveal-effects/Fade';
 
-const Cards = ({data}) => {
+const Cards = ({ data }) => {
   const [open, setOpen] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState([]);
 
@@ -27,8 +28,9 @@ const Cards = ({data}) => {
 
   return (
     <>
-        {data.map((project, i) => (
-          <Card id={project.id} key={i} sx={{ mt: 4, ml:2, mr: 2, mb: 4, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
+      {data.map((project, i) => (
+        <Fade bottom delay={i * 50}>
+          <Card id={project.id} key={i} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
             <CardMedia
               component="img"
               alt={project.imageDescription}
@@ -50,10 +52,11 @@ const Cards = ({data}) => {
               <Button variant="outlined" onClick={() => handleOpen(project.id)}>Read more</Button>
             </CardActions>
           </Card>
-        ))}
-        <Dialog open={open} onClose={handleClose}>
-          <CardsDialog handleClose={handleClose} item={isClicked}/>
-        </Dialog>
+        </Fade>
+      ))}
+      <Dialog open={open} onClose={handleClose}>
+        <CardsDialog handleClose={handleClose} item={isClicked} />
+      </Dialog>
     </>
   );
 }

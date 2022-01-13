@@ -8,9 +8,9 @@ import Button from '@mui/material/Button';
 
 const CardsDialog = ({ item, handleClose }) => {
   return (
-    <div sx={{maxWidth: 750, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
-    <DialogTitle>{item.name}</DialogTitle>
-    <DialogContent>{item.title}</DialogContent>
+    <div sx={{ maxWidth: 750, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
+      <DialogTitle>{item.name}</DialogTitle>
+      <DialogContent>{item.title}</DialogContent>
       <DialogContent>
         {item.description}
       </DialogContent>

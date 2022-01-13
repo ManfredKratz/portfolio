@@ -23,15 +23,15 @@ export default function TemporaryDrawer() {
     <div>
       <React.Fragment>
         <IconButton
-            size="large"
-            color="white"
-            edge="end"
-            aria-label="menu"
-            onClick={toggleDrawer(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-        <Drawer anchor="right" open={state} onClose={toggleDrawer(false)} sx={{backgroundColor: 'secondary.main'}}>
+          size="large"
+          color="white"
+          edge="end"
+          aria-label="menu"
+          onClick={toggleDrawer(true)}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Drawer anchor="right" open={state} onClose={toggleDrawer(false)} sx={{ backgroundColor: 'secondary.main' }}>
           <Box
             sx={{ width: 250 }}
             role="presentation"

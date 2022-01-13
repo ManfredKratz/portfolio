@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
 
 import Typed from 'typed.js';
+import Fade from 'react-reveal-effects/Fade';
 
 const Header = () => {
   const typedName = useRef(null);
@@ -52,16 +53,21 @@ const Header = () => {
     </Box>
   );
 
-  const items = [introduction, name, title, description];
+  const button = (
+    <Button variant="contained" color="primary" size="large" disableElevation={true} sx={{ mt: 6 }}>
+      Contact me
+    </Button>
+  );
+
+  const items = [introduction, name, title, description, button];
 
   return (
     <>
       {items.map((item, i) => (
-        <div mt={2} key={i}>{item}</div>
+        <Fade bottom delay={i * 300}>
+          <div mt={2} key={i}>{item}</div>
+        </Fade>
       ))}
-      <Button variant="contained" color="primary" size="large" disableElevation={true} sx={{ mt: 6 }}>
-        Contact me
-      </Button>
     </>
   );
 }
