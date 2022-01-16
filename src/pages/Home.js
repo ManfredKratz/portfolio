@@ -1,5 +1,3 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
@@ -11,11 +9,11 @@ import Technologies from '../utils/Technologies';
 
 const Home = () => {
   const items = [
-    { content: <Header /> },
-    { content: <About /> },
-    { content: <Technologies /> },
-    { content: <Projects /> },
-    { content: <Contact /> }
+    { content: <Header />, ref: 'header' },
+    { content: <About />, ref: 'aboutme' },
+    { content: <Technologies />, ref: 'technologies' },
+    { content: <Projects />, ref: 'projects' },
+    { content: <Contact />, ref: 'contact' }
   ];
 
   return (

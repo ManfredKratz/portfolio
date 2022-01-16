@@ -7,7 +7,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 
 import CardsDialog from './CardsDialog';
 import Fade from 'react-reveal-effects/Fade';
@@ -54,7 +53,7 @@ const Cards = ({ data }) => {
           </Card>
         </Fade>
       ))}
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} PaperProps={{sx: { backgroundColor: 'background.main', color: 'text.main'}}}>
         <CardsDialog handleClose={handleClose} item={isClicked} />
       </Dialog>
     </>

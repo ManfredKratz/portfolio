@@ -5,7 +5,7 @@ const projectData = [
     id: 1,
     name: 'Tweety',
     title: 'Social media platform',
-    description: 'Socket based social media platform with realtime posts.',
+    description: 'Realtime social media platform based on sockets.io.',
     image: aboutme,
     imageDescription: 'imagedesc'
   },
@@ -13,23 +13,23 @@ const projectData = [
     id: 2,
     name: 'Lion Investment',
     title: 'Investment banking app',
-    description: 'Socket based social media platform with realtime posts.',
+    description: 'Investment banking app for fund management by bank employees.',
     image: aboutme,
     imageDescription: 'imagedesc'
   },
   {
     id: 3,
-    name: 'Timestamp',
-    title: 'Timestamp for services.',
-    description: 'Socket based social media platform with realtime posts.',
+    name: 'Time tracking',
+    title: 'Time tracking app for services.',
+    description: 'App to record the working hours of service employees.',
     image: aboutme,
     imageDescription: 'imagedesc'
   },
   {
     id: 4,
-    name: 'Fliesen Buddys',
-    title: 'Homepage for Tile Layers.',
-    description: 'Socket based social media platform with realtime posts.',
+    name: 'Tile Buddys',
+    title: 'Homepage for tilers.',
+    description: 'Design of a homepage and cooperate identity of a tiling company.',
     image: aboutme,
     imageDescription: 'imagedesc'
   },

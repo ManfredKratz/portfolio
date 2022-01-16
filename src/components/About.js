@@ -12,7 +12,7 @@ const About = () => {
   return (
     <Fade bottom>
       <div>
-        <Avatar src={aboutme} alt='Manfred Kratz Picture' variant="rounded" sx={{ height: '150px', width: '150px' }} />
+        <Avatar src={aboutme} alt='Manfred Kratz Picture' variant="rounded" sx={{ height: '200px', width: '200px' }} />
       </div>
       <div>
         <Typography variant='h4' color="text.title" mt={5} mb={3}><b>About me</b></Typography>
