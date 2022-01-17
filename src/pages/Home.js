@@ -9,31 +9,31 @@ import Technologies from '../utils/Technologies';
 
 const Home = () => {
   const items = [
-    { content: <Header />, ref: 'header' },
-    { content: <About />, ref: 'aboutme' },
-    { content: <Technologies />, ref: 'technologies' },
-    { content: <Projects />, ref: 'projects' },
-    { content: <Contact />, ref: 'contact' }
+    { content: <Header />, id: 'start' },
+    { content: <About />, id: 'aboutme' },
+    { content: <Technologies />, id: 'technologies' },
+    { content: <Projects />, id: 'projects' },
+    { content: <Contact />, id: 'contact' }
   ];
 
   return (
-    <>
+    <Box sx={{ backgroundColor: 'background.main', color: 'text.main' }}>
       {items.map((item) => (
-        <Box sx={{ backgroundColor: 'background.main', color: 'text.main' }}>
-        <Grid
-          container
-          spacing={0}
-          alignItems="center"
-          justifyContent="center"
-          style={{ minHeight: "100vh" }}
-        >
-          <Grid item>
-            <Box m={2}>{item.content}</Box>
+          <div id={item.id}>
+          <Grid
+            container
+            spacing={0}
+            alignItems="center"
+            justifyContent="center"
+            style={{ minHeight: "100vh" }}
+          >
+            <Grid item>
+              <Box m={2}>{item.content}</Box>
+            </Grid>
           </Grid>
-        </Grid>
-        </Box>
+          </div>
       ))}
-      </>
+    </Box>
   );
 }
 

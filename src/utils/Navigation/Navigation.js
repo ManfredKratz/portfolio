@@ -9,41 +9,21 @@ import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 
-
 import NavigationDrawer from './NavigationDrawer';
-function HideOnScroll(props) {
-  const { children, window } = props;
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-  });
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-}
-
-HideOnScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  window: PropTypes.func,
-};
 
 const Navigation = (props) => {
   return (
       <Box sx={{ flexGrow: 1 }}>
-        <HideOnScroll {...props}>
           <AppBar color="secondary" elevation="0">
             <Toolbar>
               <Typography sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1, color: '#FFFFFF' }}>
                 <Typography variant="overline" sx={{ color: '#FFFFFF' }}><b>{'<'}</b></Typography>
-                <Typography variant="overline" color="primary"><b>{'K'}</b></Typography>
+                <Typography variant="overline" color="primary"><b>{'MK'}</b></Typography>
                 <Typography variant="overline" sx={{ color: '#FFFFFF' }}><b>{'/>'}</b></Typography>
               </Typography>
               <NavigationDrawer />
             </Toolbar>
           </AppBar>
-        </HideOnScroll>
       </Box>
   );
 }

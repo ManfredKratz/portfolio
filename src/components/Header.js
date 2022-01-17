@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
 
+import { HashLink } from 'react-router-hash-link';
 import Typed from 'typed.js';
 import Fade from 'react-reveal-effects/Fade';
 
@@ -54,9 +55,11 @@ const Header = () => {
   );
 
   const button = (
+    <HashLink smooth to="/#contact">
     <Button variant="contained" color="primary" size="large" disableElevation={true} sx={{ mt: 6 }}>
       Contact me
     </Button>
+    </HashLink>
   );
 
   const items = [introduction, name, title, description, button];

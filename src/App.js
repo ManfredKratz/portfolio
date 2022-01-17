@@ -1,6 +1,11 @@
 import Home from "./pages/Home";
 import Navigation from "./utils/Navigation/Navigation";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -29,10 +34,15 @@ const theme = createTheme({
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Navigation />
-      <Home />
-    </ThemeProvider>
+
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

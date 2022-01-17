@@ -3,11 +3,12 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+
+import { HashLink } from 'react-router-hash-link';
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState(false);
@@ -16,27 +17,26 @@ export default function TemporaryDrawer() {
     setState(state);
   };
 
-  const executeScroll = () => this.myRef.current.scrollIntoView();
    const items = [
     {
       page: 'Start',
-      route: '/#start'
+      route: 'start'
     },
     {
       page: 'About me',
-      route: '/#aboutme'
+      route: 'aboutme'
     },
     {
       page: 'Technologies',
-      route: '/#technologies'
+      route: 'technologies'
     },
     {
       page: 'Projects',
-      route: '/#projects'
+      route: 'projects'
     },
     {
       page: 'Contact',
-      route: '/#contact'
+      route: 'contact'
     },
   ]
 
@@ -62,14 +62,12 @@ export default function TemporaryDrawer() {
             <List>
               {items.map(
                 (text, index) => (
-                  <ListItem button onClick={executeScroll} key={index}>
-                    <ListItemText primary={text.page} />
+                  <ListItem button key={index}>
+                    <HashLink smooth to={("/#" + text.route)}>{text.page}</HashLink>
                   </ListItem>
                 )
               )}
             </List>
-            <Divider/>
-            test
           </Box>
         </Drawer>
       </React.Fragment>
