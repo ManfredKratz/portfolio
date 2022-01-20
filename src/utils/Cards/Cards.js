@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
@@ -28,13 +27,13 @@ const Cards = ({ data }) => {
   return (
     <>
       {data.map((project, i) => (
-        <Fade bottom delay={i * 50}>
-          <Card id={project.id} key={i} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
+        <Fade bottom delay={i * 50} key={i}>
+          <Card id={project.id} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
             <CardMedia
               component="img"
               alt={project.imageDescription}
               height="140"
-              image={project.image}
+              image={project.thumbnail}
             />
             <CardContent>
               <Typography gutterBottom variant="h6" color="text.title" component="div">
@@ -53,9 +52,7 @@ const Cards = ({ data }) => {
           </Card>
         </Fade>
       ))}
-      <Dialog open={open} onClose={handleClose} PaperProps={{sx: { backgroundColor: 'background.main', color: 'text.main'}}}>
-        <CardsDialog handleClose={handleClose} item={isClicked} />
-      </Dialog>
+      <CardsDialog open={open} handleClose={handleClose} items={isClicked} />
     </>
   );
 }

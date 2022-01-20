@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <>
       <Typography variant="h4" color="text.title" mb={2}>
-        <b>Projects I've built</b>
+        <b>Projektreferenzen</b>
       </Typography>
       <Grid
         container

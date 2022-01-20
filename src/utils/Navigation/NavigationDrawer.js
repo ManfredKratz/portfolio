@@ -2,9 +2,7 @@ import * as React from "react";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
+import Button from "@mui/material/Button";
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -54,20 +52,18 @@ export default function TemporaryDrawer() {
         </IconButton>
         <Drawer anchor="right" open={state} onClose={toggleDrawer(false)} PaperProps={{sx: { backgroundColor: 'background.main', color: 'text.main'}}}>
           <Box
-            sx={{ width: 250 }}
+            sx={{ width: 250, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
             role="presentation"
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
           >
-            <List>
               {items.map(
-                (text, index) => (
-                  <ListItem button key={index}>
-                    <HashLink smooth to={("/#" + text.route)}>{text.page}</HashLink>
-                  </ListItem>
+                (text, i) => (
+                    <HashLink key={i} smooth to={("/#" + text.route)} width="100%">
+                      <Button size="large" color="white">{text.page}</Button>
+                      </HashLink>
                 )
               )}
-            </List>
           </Box>
         </Drawer>
       </React.Fragment>

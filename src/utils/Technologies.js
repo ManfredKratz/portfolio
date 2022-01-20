@@ -32,12 +32,12 @@ const Technologies = () => {
   return (
     <>
       <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center' }} color="primary.main" mt={25} mb={5}>
-        Technologies I've recently used:
+        Technologien die ich neulich eingesetz habe:
       </Typography>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {items.map((item, i) => (
-          <Fade bottom delay={i * 50}>
-            <div key={i} style={{ ...alignContent }}>
+          <Fade bottom delay={i * 50} key={i} >
+            <div style={{ ...alignContent }}>
               <img alt={item.description} src={item.icon} height="50" width="50" />
               <Typography variant="overline" mb={5}>{item.name}</Typography>
             </div>

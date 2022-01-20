@@ -14,7 +14,7 @@ import NavigationDrawer from './NavigationDrawer';
 const Navigation = (props) => {
   return (
       <Box sx={{ flexGrow: 1 }}>
-          <AppBar color="secondary" elevation="0">
+          <AppBar color="secondary" elevation={0}>
             <Toolbar>
               <Typography sx={{ display: 'flex', flexDirection: 'row', flexGrow: 1, color: '#FFFFFF' }}>
                 <Typography variant="overline" sx={{ color: '#FFFFFF' }}><b>{'<'}</b></Typography>

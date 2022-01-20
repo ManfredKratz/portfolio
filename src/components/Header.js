@@ -28,7 +28,7 @@ const Header = () => {
 
   const introduction = (
     <Typography variant='overline'>
-      Hello world, my name is
+     <code>Hello world, mein Name ist</code>
     </Typography>
   );
 
@@ -40,16 +40,15 @@ const Header = () => {
 
   const title = (
     <Typography variant='h6' mt={2} mb={5} color="primary">
-      I'm a frontend engineer living near Ulm.
+      Ich bin ein Frontend Developer aus der Nähe von Ulm.
     </Typography>
   );
 
   const description = (
     <Box max-width='750px'>
       <Typography mt={2} variant='body1'  >
-        I'm specializing in building user-friendly digital experiences.<br />
-        Besides my passion for web development, I am convinced of the human-centered
-        development approach.
+        Ich spezialisiere mich auf die Entwicklung von benutzerfreundlichen digitalen Erfahrungen.<br />
+        Neben meiner Leidenschaft für die Webentwicklung und Design bin ich überzeugt von dem<br /> Ansatz des Human Centered Designs.
       </Typography>
     </Box>
   );
@@ -67,8 +66,8 @@ const Header = () => {
   return (
     <>
       {items.map((item, i) => (
-        <Fade bottom delay={i * 300}>
-          <div mt={2} key={i}>{item}</div>
+        <Fade bottom delay={i * 300} key={i}>
+          <div mt={2} >{item}</div>
         </Fade>
       ))}
     </>

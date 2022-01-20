@@ -18,8 +18,8 @@ const Home = () => {
 
   return (
     <Box sx={{ backgroundColor: 'background.main', color: 'text.main' }}>
-      {items.map((item) => (
-          <div id={item.id}>
+      {items.map((item, i) => (
+          <div id={item.id} key={i}>
           <Grid
             container
             spacing={0}
