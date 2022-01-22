@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import CardsDialog from './CardsDialog';
 import Fade from 'react-reveal-effects/Fade';
@@ -27,13 +28,15 @@ const Cards = ({ data }) => {
   return (
     <>
       {data.map((project, i) => (
-        <Fade bottom delay={i * 50} key={i}>
-          <Card id={project.id} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
+        <Fade bottom delay={i * 20} key={i}>
+          <Card id={project.id} onClick={() => handleOpen(project.id)} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
             <CardMedia
               component="img"
               alt={project.imageDescription}
-              height="140"
+              height="190"
               image={project.thumbnail}
+              loading="lazy"
+              sx={{mt:2}}
             />
             <CardContent>
               <Typography gutterBottom variant="h6" color="text.title" component="div">
@@ -47,7 +50,7 @@ const Cards = ({ data }) => {
               </Typography>
             </CardContent>
             <CardActions >
-              <Button variant="outlined" onClick={() => handleOpen(project.id)}>Read more</Button>
+              <Button variant="outlined" endIcon={<ArrowDropDownIcon/>} onClick={() => handleOpen(project.id)}>Mehr erfahren</Button>
             </CardActions>
           </Card>
         </Fade>

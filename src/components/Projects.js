@@ -9,8 +9,8 @@ const Projects = () => {
 
   return (
     <>
-      <Typography variant="h4" color="text.title" mb={2}>
-        <b>Projektreferenzen</b>
+      <Typography variant="h4" color="text.title" mb={4}>
+        <b>Projekte</b>
       </Typography>
       <Grid
         container

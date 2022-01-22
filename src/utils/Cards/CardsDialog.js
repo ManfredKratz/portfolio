@@ -1,71 +1,88 @@
 import React from "react";
 
-import Carousel from "react-material-ui-carousel";
+import Carouseler from "react-material-ui-carousel";
 import Container from "@mui/material/Container";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
+import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import GitHub from '@mui/icons-material/GitHub';
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const CardsDialog = ({ open, handleClose, items }) => {
 
+  const responsive = {
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 }
+  };
 
   return (
     <>
       {open === true ?
         <Dialog
-          maxWidth="md"
+          fullScreen
+          titleStyle={{ textAlign: "center" }}
           open={open}
           onClose={handleClose}
-          PaperProps={{ sx: { backgroundColor: 'background.main', color: 'text.main' } }}
+          PaperProps={{ sx: { maxWidth: 1000, backgroundColor: 'background.main', color: 'text.main' } }}
         >
           <Container sx={{ ma: 15 }}>
-            <div>
-              <DialogTitle
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexGrow: 1,
-                }}
-              >
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-                  <Typography variant="h5"><b>{items.name}</b></Typography>
-                  <Typography variant="caption">{items.title}</Typography>
-                </div>
-                <IconButton
-                  color="inherit"
-                  onClick={handleClose}
-                  aria-label="close"
-                >
-                  <CloseIcon />
-                </IconButton>
-              </DialogTitle>
+            <div style={{ minWidth: "100%", maxWidth: 200, width: "100%" }}>
               <DialogContent>
                 <div>
-                  <Carousel swipe={true} scroll='body'
-                    indicatorIconButtonProps={{
-                      style: {
-                        padding: '2px',
-                      }
-                    }}
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <div style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexGrow: 1,
+                    }}>
+                      <Typography variant="h5">
+                        <b>{items.name}</b>
+                      </Typography>
+                      <IconButton
+                        color="inherit"
+                        onClick={handleClose}
+                        aria-label="close"
+                      >
+                        <CloseIcon />
+                      </IconButton>
+                    </div>
+                    <Typography variant="overline" variant="body2" mb={4}>{items.title}</Typography>
+                  </div>
+                  <Carousel
+                    ssr={true}
+                    swipeable={true}
+                    showDots={true}
+                   
+                    responsive={responsive}
+                    centerMode={false}
                   >
                     {items.images.map((item, i) => (
-                      <img src={item} alt={"picture" + i} height="auto" width="100%"></img>
+                      <img src={item} height="auto" width="100%" loading="lazy"></img>
                     ))}
+
                   </Carousel>
                 </div>
-                <Typography variant="caption">
-                  {items.usedTechnologies}
-                </Typography>
-                <br />
-                <Typography variant="body2" color="primary" mt={2} mb={1}>
-                  <b>Beschreibung</b>
-                </Typography>
-                <Typography variant="body2">
-                  {items.long_desc}
-                </Typography>
+                <Grid mt={4}>
+                  <Typography variant="body2" color="primary" mb={1}>
+                    <b>Verwendete Technologien</b>
+                  </Typography>
+                  <Typography gutterBottom variant="body1">
+                    <code>{items.usedTechnologies}</code>
+                  </Typography>
+                  <br />
+                  <Typography variant="body2" color="primary" mt={2} mb={1}>
+                    <b>Beschreibung</b>
+                  </Typography>
+                  <Typography variant="body1">
+                    {items.long_desc}
+                  </Typography>
+                </Grid>
               </DialogContent>
             </div>
           </Container>
