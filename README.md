@@ -5,7 +5,6 @@ Welcome to my portfolio page.
 Following technologies are used for creating the application:
 - React 
 - MUI 
-- Typed.js
 
 Feel free to contact me.
 

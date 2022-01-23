@@ -1,12 +1,11 @@
-import * as React from "react";
+import * as React from 'react';
 
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import Typography from "@mui/material/Typography";
 import MenuIcon from '@mui/icons-material/Menu';
-
 
 import { HashLink } from 'react-router-hash-link';
 
@@ -17,25 +16,25 @@ export default function TemporaryDrawer() {
     setState(state);
   };
 
-   const items = [
+  const items = [
     {
       page: 'Start',
       route: 'start'
     },
     {
-      page: 'About me',
+      page: 'Über mich',
       route: 'aboutme'
     },
     {
-      page: 'Technologies',
+      page: 'Technologien',
       route: 'technologies'
     },
     {
-      page: 'Projects',
+      page: 'Projekte',
       route: 'projects'
     },
     {
-      page: 'Contact',
+      page: 'Kontakt',
       route: 'contact'
     },
   ]
@@ -52,21 +51,40 @@ export default function TemporaryDrawer() {
         >
           <MenuIcon />
         </IconButton>
-        <Drawer anchor="right" open={state} onClose={toggleDrawer(false)} PaperProps={{sx: { backgroundColor: 'background.main', color: 'text.main'}}}>
+        <Drawer
+          anchor="right"
+          open={state}
+          onClose={toggleDrawer(false)}
+          PaperProps={{
+            sx: {
+              backgroundColor: "background.main",
+              color: "text.main"
+            }
+          }}>
           <Box
-            sx={{ width: 250, display: 'flex', flexDirection: 'column' }}
+            sx={{ width: 250 }}
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
           >
-            <Box style={{alignSelf: 'flex-end'}}>
+            <Grid
+              container
+              spacing={0}
+              direction="column"
+              alignItems="center"
+              justifyContent="center"
+              width="100%"
+              style={{ minHeight: "100vh" }}
+            >
               {items.map(
                 (text, i) => (
+                  <Grid item width="100%">
                     <HashLink key={i} smooth to={("/#" + text.route)} width="100%" style={{ textDecoration: 'none' }}>
-                      <Button size="large" sx={{minWidth: "100%", mb: 2}} color="white">{text.page}</Button>
-                      </HashLink>
+                      <Button size="large" sx={{ minWidth: "100%", mb: 2 }} color="white">{text.page}</Button>
+                    </HashLink>
+                  </Grid>
                 )
               )}
-              </Box>
+            </Grid>
           </Box>
         </Drawer>
       </React.Fragment>

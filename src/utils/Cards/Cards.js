@@ -29,7 +29,7 @@ const Cards = ({ data }) => {
     <>
       {data.map((project, i) => (
         <Fade bottom delay={i * 20} key={i}>
-          <Card id={project.id} onClick={() => handleOpen(project.id)} sx={{ m: 2, maxWidth: 325, backgroundColor: '#0A192F', color: '#FFFFFF' }}>
+          <Card id={project.id} onClick={() => handleOpen(project.id)} sx={{ m: 2, maxWidth: 325, backgroundColor: "#0A192F", color: "#FFFFFF" }}>
             <CardMedia
               component="img"
               alt={project.imageDescription}
@@ -39,18 +39,18 @@ const Cards = ({ data }) => {
               sx={{mt:2}}
             />
             <CardContent>
+            <Typography gutterBottom variant="overline" color="text.main" component="div">
+                {project.title}
+              </Typography>
               <Typography gutterBottom variant="h6" color="text.title" component="div">
                 <b>{project.name}</b>
-              </Typography>
-              <Typography gutterBottom variant="overline" color="text.main" component="div">
-                {project.title}
               </Typography>
               <Typography variant="body2" mt={3} color="text.main" >
                 {project.description}
               </Typography>
             </CardContent>
             <CardActions >
-              <Button variant="outlined" endIcon={<ArrowDropDownIcon/>} onClick={() => handleOpen(project.id)}>Mehr erfahren</Button>
+              <Button variant="outlined" endIcon={<ArrowDropDownIcon/>} onClick={() => handleOpen(project.id)}>Mehr</Button>
             </CardActions>
           </Card>
         </Fade>

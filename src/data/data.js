@@ -1,5 +1,3 @@
-import aboutme from '../assets/aboutme.jpg';
-
 //logos
 import FB_Logo from '../assets/projects/logos/fb_logo.png'
 import Lion_Logo from '../assets/projects/logos/lion_logo.png'
@@ -54,8 +52,8 @@ const projectData = [
     name: 'Tweety',
     title: 'Social Media Plattform',
     logo: Tweety_Logo,
-    description: 'Realtime social media platform based on sockets.io.',
-    long_desc: 'Tweety ist eine Social Media Plattform die auf Websockets (Sockets.io) basiert. Der Fokus des Projekts lag auf der Übertragung der Informationen zu Echtzeit.',
+    description: 'Echtzeit Social Media Plattform basierend auf Sockets.io und Redis.',
+    long_desc: 'Tweety ist eine Social Media Plattform, die auf Websockets (Sockets.io) basiert. Der Fokus des Projekts lag auf der Übertragung der Informationen in Echtzeit sowie der Erstellung eines minimalistischen Designs.',
     usedTechnologies: 'Angular, Bootstrap, Express, Redis, Sockets.io',
     thumbnail: tw_thumb,
     images: [tw0, tw1, tw2, tw3, tw4, tw5],
@@ -66,9 +64,9 @@ const projectData = [
     name: 'Lion Investment',
     title: 'Investmentbanking App',
     logo: Lion_Logo,
-    description: 'Investment banking app for fund management by bank employees.',
-    long_desc: 'Weitere Informationen',
-    usedTechnologies: 'Angular, Bootstrap, Express, Redis, Sockets.io',
+    description: 'Softwarelösung für das Management einer Fondsinvestmentbank.',
+    long_desc: 'Die Anwendung stellt eine Softwarelösung für eine Fondsinvestmentbank dar. In diesem Projekt wurde für das Investmenthaus „Lion Investment“ ein Programm entworfen, welches Geschäftsprozesse digital abbildet. Die Kundenverwaltung und Beraterübersicht bis hin zur Administration der Kundeneinlagen in die jeweiligen Investmentfonds wurden in der Anwendung berücksichtigt.',
+    usedTechnologies: 'Vue, Vuetify, Express, Nodejs, PostgreSQL',
     thumbnail: li_thumb,
     images: [li1, li2, li3, li4, li5, li6, li7, li8, li9],
     imageDescription: 'imagedesc'
@@ -78,9 +76,9 @@ const projectData = [
     name: 'Time tracking',
     title: 'Zeiterfassungssystem',
     logo: TT_Logo,
-    description: 'App to record the working hours of service employees.',
-    long_desc: 'Weitere Informationen',
-    usedTechnologies: 'Angular, Bootstrap, Express, Redis, Sockets.io',
+    description: 'Anwendung zur Zeiterfassung von Service Mitarbeiter*innen im Außendienst.',
+    long_desc: 'Im Rahmen des Projekts geht es speziell um eine Software für die Arbeitszeiterfassung der Service-Techniker*innen im Außendienst. Diese soll die Möglichkeit bieten erledigte Einsätze direkt vor Ort bei den Kund*innen des Unternehmens zu dokumentieren.',
+    usedTechnologies: 'Vue, Vuetify, Express, Nodejs, SQLite ',
     thumbnail: tt_thumb,
     images: [tt0, tt1, tt2, tt3, tt4],
     imageDescription: 'imagedesc'
@@ -90,9 +88,9 @@ const projectData = [
     name: 'Fliesen Buddys',
     title: 'Fliesenleger Homepage',
     logo: FB_Logo,
-    description: 'Design of a homepage and cooperate identity of a tiling company.',
-    long_desc: 'Weitere Informationen',
-    usedTechnologies: 'Angular, Bootstrap, Express, Redis, Sockets.io',
+    description: 'Homepage für eine Fliesenlegerfirma inkl. Erstellung einer Cooperate Identity.',
+    long_desc: 'Das Projekt Fliesen Buddys umfasste neben der Umsetzung der Seite die Erstellung einer Cooperate Identity. Der Fokus lag primär auf der korrekten Darstellung der mobilen Ansicht der Homepage.',
+    usedTechnologies: 'Vue, Vuetify',
     thumbnail: fb_thumb,
     images: [fb0, fb1, fb2, fb3, fb4, fb5, fb6, fb7],
     imageDescription: 'imagedesc'

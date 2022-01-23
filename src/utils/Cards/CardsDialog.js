@@ -1,14 +1,12 @@
-import React from "react";
+import * as React from 'react';
 
-import Carouseler from "react-material-ui-carousel";
-import Container from "@mui/material/Container";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-import GitHub from '@mui/icons-material/GitHub';
+import Container from '@mui/material/Container';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -29,13 +27,13 @@ const CardsDialog = ({ open, handleClose, items }) => {
           titleStyle={{ textAlign: "center" }}
           open={open}
           onClose={handleClose}
-          PaperProps={{ sx: { maxWidth: 1000, backgroundColor: 'background.main', color: 'text.main' } }}
+          PaperProps={{ sx: { maxWidth: 1000, backgroundColor: "background.main", color: "text.main" } }}
         >
           <Container sx={{ ma: 15 }}>
             <div style={{ minWidth: "100%", maxWidth: 200, width: "100%" }}>
               <DialogContent>
                 <div>
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ display: "flex", flexDirection: "column" }}>
                     <div style={{
                       display: "flex",
                       justifyContent: "space-between",
@@ -52,7 +50,7 @@ const CardsDialog = ({ open, handleClose, items }) => {
                         <CloseIcon />
                       </IconButton>
                     </div>
-                    <Typography variant="overline" variant="body2" mb={4}>{items.title}</Typography>
+                    <Typography variant="body2" mb={4}>{items.title}</Typography>
                   </div>
                   <Carousel
                     ssr={true}
@@ -63,7 +61,7 @@ const CardsDialog = ({ open, handleClose, items }) => {
                     centerMode={false}
                   >
                     {items.images.map((item, i) => (
-                      <img src={item} height="auto" width="100%" loading="lazy"></img>
+                      <img src={item} height="auto" width="100%" loading="lazy" alt={"image" + i}></img>
                     ))}
 
                   </Carousel>

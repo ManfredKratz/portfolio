@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(() => {
     const typed = new Typed(typedName.current, {
-      strings: ['Manfred Kratz.'],
+      strings: ["Manfred Kratz."],
       startDelay: 300,
       typeSpeed: 50
     });
@@ -24,26 +24,26 @@ const Header = () => {
   }, []);
 
   const introduction = (
-    <Typography variant='overline'>
+    <Typography variant="overline">
       <code>Hello world, mein Name ist</code>
     </Typography>
   );
 
   const name = (
-    <Typography variant='h3' color="text.title" mt={2}>
+    <Typography variant="h3" color="text.title" mt={2}>
       <b><span ref={typedName}></span></b>
     </Typography>
   );
 
   const title = (
-    <Typography variant='h6' mt={2} mb={4} color="primary">
+    <Typography variant="h6" mt={2} mb={4} color="primary">
       Ich bin ein Frontend Developer aus der Nähe von Ulm.
     </Typography>
   );
 
   const description = (
-    <Box max-width='750px'>
-      <Typography mt={2} variant='body1'  >
+    <Box max-width="750px">
+      <Typography mt={2} variant="body1">
         Ich spezialisiere mich auf die Entwicklung von benutzerfreundlichen digitalen Erfahrungen und verfolge dabei den Ansatz
         des Human Centered Designs.
       </Typography>

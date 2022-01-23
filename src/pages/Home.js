@@ -5,19 +5,19 @@ import Header from '../components/Header';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
-import Technologies from '../utils/Technologies';
+import Technologies from '../components/Technologies';
 
 const Home = () => {
   const items = [
-    { content: <Header />, id: 'start' },
-    { content: <About />, id: 'aboutme' },
-    { content: <Technologies />, id: 'technologies' },
-    { content: <Projects />, id: 'projects' },
-    { content: <Contact />, id: 'contact' }
+    { content: <Header />, id: "start" },
+    { content: <About />, id: "aboutme" },
+    { content: <Technologies />, id: "technologies" },
+    { content: <Projects />, id: "projects" },
+    { content: <Contact />, id: "contact" },
   ];
 
   return (
-    <Box sx={{ backgroundColor: 'background.main', color: 'text.main' }}>
+    <Box sx={{ backgroundColor: "background.main", color: "text.main" }}>
       {items.map((item, i) => (
           <div id={item.id} key={i}>
           <Grid

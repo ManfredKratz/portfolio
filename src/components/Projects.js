@@ -3,7 +3,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Cards from '../utils/Cards/Cards';
-import ProjectData from '../data/projects';
+import ProjectData from '../data/data';
 
 const Projects = () => {
 

@@ -16,33 +16,33 @@ import sass from '../assets/technologies/sass.png';
 import Fade from 'react-reveal-effects/Fade';
 
 const items = [
-  { name: 'HTML 5', description: 'HTML 5 Logo', icon: html5 },
-  { name: 'CSS', description: 'CSS 3 Logo', icon: css },
-  { name: 'JavaScript', description: 'JavaScript Logo', icon: js },
-  { name: 'TypeScript', description: 'TypeScript Logo', icon: ts },
-  { name: 'React.js', description: 'ReactJs Logo', icon: react },
-  { name: 'Vue.js', description: 'VueJs Logo', icon: vue },
-  { name: 'NPM', description: 'NPM Logo', icon: npm },
-  { name: 'Node.js', description: 'NodeJs Logo', icon: node_js },
-  { name: 'Git', description: 'Git Logo', icon: gitlab },
-  { name: 'Docker', description: 'Docker Logo', icon: docker },
-  { name: 'GraphQL', description: 'GraphQL Logo', icon: graphql },
-  { name: 'SASS/SCSS', description: 'SASS Logo', icon: sass },
+  { name: "HTML 5", description: "HTML 5 Logo", icon: html5 },
+  { name: "CSS", description: "CSS 3 Logo", icon: css },
+  { name: "JavaScript", description: "JavaScript Logo", icon: js },
+  { name: "TypeScript", description: "TypeScript Logo", icon: ts },
+  { name: "React.js", description: "ReactJs Logo", icon: react },
+  { name: "Vue.js", description: "VueJs Logo", icon: vue },
+  { name: "NPM", description: "NPM Logo", icon: npm },
+  { name: "Node.js", description: "NodeJs Logo", icon: node_js },
+  { name: "Git", description: "Git Logo", icon: gitlab },
+  { name: "Docker", description: "Docker Logo", icon: docker },
+  { name: "GraphQL", description: "GraphQL Logo", icon: graphql },
+  { name: "SASS/SCSS", description: "SASS Logo", icon: sass },
 ];
 
 const Technologies = () => {
 
   const alignContent = {
-    width: '25%', display: 'flex', justifyContent: 'center',
-    alignItems: 'center', flexDirection: 'column'
+    width: "25%", display: "flex", justifyContent: "center",
+    alignItems: "center", flexDirection: "column"
   };
 
   return (
     <>
-      <Typography variant="h6" sx={{ display: 'flex', justifyContent: 'center' }} color="primary.main" mt={25} mb={5}>
+      <Typography variant="h6" sx={{ display: "flex", justifyContent: "center" }} color="primary.main" mt={25} mb={5}>
         Technologien die ich aktuell nutze
       </Typography>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {items.map((item, i) => (
           <Fade bottom delay={i * 20} key={i} >
             <div style={{ ...alignContent }}>
